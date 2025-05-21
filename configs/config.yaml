@@ -1,0 +1,12 @@
+models:
+  CLIP: openai/clip-vit-base-patch16
+  TinyCLIP: wkcn/TinyCLIP-ViT-39M-16-Text-19M-YFCC15M
+
+labels:
+  - "a photo of a cat"
+  - "a photo of a dog"
+  - "a photo of a car"
+
+image_url: "http://images.cocodataset.org/val2017/000000039769.jpg"
+
+ground_truth: "a photo of a dog"
