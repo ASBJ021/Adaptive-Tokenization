@@ -35,11 +35,19 @@ def get_text_embedding(text):
     return output.last_hidden_state[:, 0, :]  # CLS token
 
 # ---- Select Top-K Patches ----
-def select_top_k_patches(patch_tokens, text_embedding, top_k):
+def select_top_k_patches(patch_tokens, text_embedding, top_k_percentage):
+
     patch_tokens = torch.nn.functional.normalize(patch_tokens, dim=-1)
     text_embedding = torch.nn.functional.normalize(text_embedding, dim=-1)
     sims = torch.nn.functional.cosine_similarity(patch_tokens, text_embedding[0], dim=-1)
+    
+    # Compute top_k count from percentage
+    total_patches = patch_tokens.shape[0]
+    top_k = max(1, int(total_patches * top_k_percentage/100))
+
+    # Select top-k indices
     top_indices = torch.topk(sims, top_k).indices
+
     return top_indices.cpu(), sims.cpu()
 
 def overlay_heatmap_on_image(image, similarity_scores, grid_size, alpha=0.5, cmap='jet'):
@@ -64,7 +72,7 @@ def overlay_heatmap_on_image(image, similarity_scores, grid_size, alpha=0.5, cma
     overlay = Image.blend(image.convert("RGBA"), heatmap_img, alpha=alpha)
     return overlay
 # ---- Visualize Top Patches ----
-def visualize_top_patches(image, top_indices, image_size, grid_size):
+def visualize_top_patches(image, top_indices, grid_size):
     draw = ImageDraw.Draw(image)
     cols, rows = grid_size
     for idx in top_indices:
@@ -77,8 +85,9 @@ def visualize_top_patches(image, top_indices, image_size, grid_size):
         draw.rectangle([x0, y0, x1, y1], outline="red", width=2)
     return image
 
+
 # ---- Run Full Flow for One Image ----
-def run_pipeline(image_url, text_prompt, top_k=10, visualize=True, resize_to_fit=True, save_path=None):
+def run_pipeline(image_url, text_prompt, top_k_percentage=10, visualize=True, resize_to_fit=True, save_path=None):
     image = Image.open(requests.get(image_url, stream=True).raw).convert("RGB")
     w, h = image.size
 
@@ -100,7 +109,7 @@ def run_pipeline(image_url, text_prompt, top_k=10, visualize=True, resize_to_fit
     cols, rows = grid_size, grid_size
 
     text_embedding = get_text_embedding(text_prompt)
-    top_indices, similarities = select_top_k_patches(patch_tokens, text_embedding, top_k)
+    top_indices, similarities = select_top_k_patches(patch_tokens, text_embedding, top_k_percentage)
 
     print(f"Top patch similarity scores:\n{similarities[top_indices]}")
 
@@ -109,7 +118,7 @@ def run_pipeline(image_url, text_prompt, top_k=10, visualize=True, resize_to_fit
 
     
     if visualize or save_path:
-        vis_image = visualize_top_patches(image.copy(), top_indices, (w, h), (cols, rows))
+        vis_image = visualize_top_patches(image.copy(), top_indices, (cols, rows))
 
         if save_path:
             vis_image.save(save_path)
@@ -119,7 +128,7 @@ def run_pipeline(image_url, text_prompt, top_k=10, visualize=True, resize_to_fit
 
         if visualize:
             plt.imshow(vis_image)
-            plt.title(f"Top-{top_k} Patches for '{text_prompt}'")
+            plt.title(f"Top-{top_k_percentage} % Patches for '{text_prompt}'")
             plt.axis("off")
             plt.show()
 
@@ -128,7 +137,7 @@ def run_pipeline(image_url, text_prompt, top_k=10, visualize=True, resize_to_fit
 
 
 url = "http://images.cocodataset.org/val2017/000000039769.jpg"
-prompt = "a photo of a dog"
-save_path = "top_patches.png"
+prompt = "a sleeping cat"
+save_path = "top_patches_p4.png"
 
-run_pipeline(url, prompt, top_k=100, save_path=save_path)
+run_pipeline(url, prompt, top_k_percentage=25, save_path=save_path)
