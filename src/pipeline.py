@@ -16,6 +16,10 @@ model_name = "wkcn/TinyCLIP-ViT-39M-16-Text-19M-YFCC15M"
 model = AutoModel.from_pretrained(model_name).eval().to(DEVICE)
 processor = AutoProcessor.from_pretrained(model_name)
 
+big_model_name = "openai/clip-vit-base-patch16"
+big_model = AutoModel.from_pretrained(big_model_name ).eval().to(DEVICE)
+big_processor = AutoProcessor.from_pretrained(big_model_name )
+
 # ------------------- TinyCLIP Patch Embeddings -------------------
 def get_patch_embeddings(image):
     inputs = processor(images=image, return_tensors="pt")
@@ -91,8 +95,6 @@ def visualize_on_original(original_image, top_indices, grid_size, resized_size):
 
 # ------------------- Big CLIP Comparison -------------------
 def compare_big_clip_full_vs_selected(original_image, top_indices, grid_size, resized_size, prompt):
-    big_processor = AutoProcessor.from_pretrained("openai/clip-vit-base-patch16")
-    big_model = AutoModelForZeroShotImageClassification.from_pretrained("openai/clip-vit-base-patch16").to(DEVICE)
 
     cols, rows = grid_size
     res_w, res_h = resized_size
@@ -131,22 +133,20 @@ def compare_big_clip_full_vs_selected(original_image, top_indices, grid_size, re
         prompt_feat = big_model.get_text_features(**text_inputs)
         canvas_feat = torch.nn.functional.normalize(canvas_feat, dim=-1)
         prompt_feat = torch.nn.functional.normalize(prompt_feat, dim=-1)
-        sim_canvas = (canvas_feat @ prompt_feat.T).item()
+        # sim_canvas = (canvas_feat @ prompt_feat.T).item()
         t1 = time.time()
 
         t2 = time.time()
         full_feat = big_model.get_image_features(full_input)
         full_feat = torch.nn.functional.normalize(full_feat, dim=-1)
-        sim_full = (full_feat @ prompt_feat.T).item()
+        # sim_full = (full_feat @ prompt_feat.T).item()
         t3 = time.time()
 
     print(f"\n[Big CLIP] Prompt: \"{prompt}\"")
-    print(f"  Selected Patches → Similarity: {sim_canvas:.2f} | Time: {t1 - t0:.3f} s")
-    print(f"  Full Image       → Similarity: {sim_full:.2f} | Time: {t3 - t2:.3f} s")
+    print(f"  Selected Patches → Time: {t1 - t0:.3f} s")
+    print(f"  Full Image       → Time: {t3 - t2:.3f} s")
 
     return {
-        "similarity_selected": sim_canvas,
-        "similarity_full": sim_full,
         "time_selected": t1 - t0,
         "time_full": t3 - t2,
         "patch_image": canvas,
@@ -192,9 +192,10 @@ def run_pipeline(image_url, text_prompt, top_k_percentage=25, visualize=True, sa
 
 # ------------------- Entry -------------------
 def main():
+
     url = "http://images.cocodataset.org/val2017/000000039769.jpg"
     prompt = "a sleeping cat"
-    save_path = "t2.png"
+    save_path = f"result/test_{time.time()}.png"
     run_pipeline(url, prompt, top_k_percentage=25, save_path=save_path)
 
 if __name__ == "__main__":
