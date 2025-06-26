@@ -1,0 +1,909 @@
+
+ Image 1/100 - Label: 34, Prompt: "a photo of a fox"
+  tiny_patch_extraction    : 0.0066 sec
+  text_embedding           : 0.0116 sec
+  patch_selection          : 0.0189 sec
+  big_patch_extraction     : 0.0047 sec
+  bigclip_injection        : 0.0020 sec
+  prediction               : 0.0028 sec
+  TOTAL time per image       : 0.0466 sec
+
+ Image 2/100 - Label: 86, Prompt: "a photo of a telephone"
+  tiny_patch_extraction    : 0.0031 sec
+  text_embedding           : 0.0017 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0020 sec
+  prediction               : 0.0036 sec
+  TOTAL time per image       : 0.0135 sec
+
+ Image 3/100 - Label: 57, Prompt: "a photo of a pear"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0020 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0033 sec
+  TOTAL time per image       : 0.0130 sec
+
+ Image 4/100 - Label: 45, Prompt: "a photo of a lobster"
+  tiny_patch_extraction    : 0.0029 sec
+  text_embedding           : 0.0016 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0028 sec
+  TOTAL time per image       : 0.0123 sec
+
+ Image 5/100 - Label: 78, Prompt: "a photo of a snake"
+  tiny_patch_extraction    : 0.0029 sec
+  text_embedding           : 0.0020 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0035 sec
+  TOTAL time per image       : 0.0132 sec
+
+ Image 6/100 - Label: 35, Prompt: "a photo of a girl"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0016 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0031 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0033 sec
+  TOTAL time per image       : 0.0128 sec
+
+ Image 7/100 - Label: 48, Prompt: "a photo of a motorcycle"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0017 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0035 sec
+  TOTAL time per image       : 0.0129 sec
+
+ Image 8/100 - Label: 83, Prompt: "a photo of a sweet pepper"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0017 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0029 sec
+  TOTAL time per image       : 0.0122 sec
+
+ Image 9/100 - Label: 89, Prompt: "a photo of a tractor"
+  tiny_patch_extraction    : 0.0029 sec
+  text_embedding           : 0.0019 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0034 sec
+  TOTAL time per image       : 0.0131 sec
+
+ Image 10/100 - Label: 8, Prompt: "a photo of a bicycle"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0018 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0028 sec
+  TOTAL time per image       : 0.0123 sec
+
+ Image 11/100 - Label: 56, Prompt: "a photo of a palm tree"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0020 sec
+  prediction               : 0.0023 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 12/100 - Label: 34, Prompt: "a photo of a fox"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0021 sec
+  TOTAL time per image       : 0.0113 sec
+
+ Image 13/100 - Label: 56, Prompt: "a photo of a palm tree"
+  tiny_patch_extraction    : 0.0029 sec
+  text_embedding           : 0.0016 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0024 sec
+  TOTAL time per image       : 0.0119 sec
+
+ Image 14/100 - Label: 91, Prompt: "a photo of a trout"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0031 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0025 sec
+  TOTAL time per image       : 0.0118 sec
+
+ Image 15/100 - Label: 19, Prompt: "a photo of a cattle"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0017 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 16/100 - Label: 85, Prompt: "a photo of a tank"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0027 sec
+  TOTAL time per image       : 0.0119 sec
+
+ Image 17/100 - Label: 53, Prompt: "a photo of a orange"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0031 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0021 sec
+  TOTAL time per image       : 0.0114 sec
+
+ Image 18/100 - Label: 96, Prompt: "a photo of a willow tree"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0025 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 19/100 - Label: 61, Prompt: "a photo of a plate"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0021 sec
+  TOTAL time per image       : 0.0113 sec
+
+ Image 20/100 - Label: 18, Prompt: "a photo of a caterpillar"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0018 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0024 sec
+  TOTAL time per image       : 0.0118 sec
+
+ Image 21/100 - Label: 73, Prompt: "a photo of a shark"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0026 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 22/100 - Label: 14, Prompt: "a photo of a butterfly"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0017 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0113 sec
+
+ Image 23/100 - Label: 76, Prompt: "a photo of a skyscraper"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0019 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0028 sec
+  TOTAL time per image       : 0.0122 sec
+
+ Image 24/100 - Label: 98, Prompt: "a photo of a woman"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0028 sec
+  TOTAL time per image       : 0.0118 sec
+
+ Image 25/100 - Label: 38, Prompt: "a photo of a kangaroo"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0024 sec
+  TOTAL time per image       : 0.0113 sec
+
+ Image 26/100 - Label: 73, Prompt: "a photo of a shark"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0027 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 27/100 - Label: 30, Prompt: "a photo of a dolphin"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0016 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0112 sec
+
+ Image 28/100 - Label: 5, Prompt: "a photo of a bed"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0025 sec
+  TOTAL time per image       : 0.0114 sec
+
+ Image 29/100 - Label: 74, Prompt: "a photo of a shrew"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0109 sec
+
+ Image 30/100 - Label: 56, Prompt: "a photo of a palm tree"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0017 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0025 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 31/100 - Label: 4, Prompt: "a photo of a beaver"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0020 sec
+  prediction               : 0.0024 sec
+  TOTAL time per image       : 0.0114 sec
+
+ Image 32/100 - Label: 62, Prompt: "a photo of a poppy"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0017 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0113 sec
+
+ Image 33/100 - Label: 13, Prompt: "a photo of a bus"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0018 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0024 sec
+  TOTAL time per image       : 0.0117 sec
+
+ Image 34/100 - Label: 78, Prompt: "a photo of a snake"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0026 sec
+  TOTAL time per image       : 0.0117 sec
+
+ Image 35/100 - Label: 8, Prompt: "a photo of a bicycle"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0019 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0115 sec
+
+ Image 36/100 - Label: 16, Prompt: "a photo of a can"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0027 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 37/100 - Label: 57, Prompt: "a photo of a pear"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0016 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0112 sec
+
+ Image 38/100 - Label: 41, Prompt: "a photo of a lawn mower"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0025 sec
+  TOTAL time per image       : 0.0113 sec
+
+ Image 39/100 - Label: 57, Prompt: "a photo of a pear"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0112 sec
+
+ Image 40/100 - Label: 14, Prompt: "a photo of a butterfly"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0019 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0021 sec
+  TOTAL time per image       : 0.0115 sec
+
+ Image 41/100 - Label: 8, Prompt: "a photo of a bicycle"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0026 sec
+  TOTAL time per image       : 0.0117 sec
+
+ Image 42/100 - Label: 37, Prompt: "a photo of a house"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0111 sec
+
+ Image 43/100 - Label: 98, Prompt: "a photo of a woman"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0016 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0024 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 44/100 - Label: 64, Prompt: "a photo of a possum"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0026 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 45/100 - Label: 34, Prompt: "a photo of a fox"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0017 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0021 sec
+  TOTAL time per image       : 0.0113 sec
+
+ Image 46/100 - Label: 42, Prompt: "a photo of a leopard"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0028 sec
+  TOTAL time per image       : 0.0117 sec
+
+ Image 47/100 - Label: 41, Prompt: "a photo of a lawn mower"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0021 sec
+  TOTAL time per image       : 0.0111 sec
+
+ Image 48/100 - Label: 73, Prompt: "a photo of a shark"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0111 sec
+
+ Image 49/100 - Label: 85, Prompt: "a photo of a tank"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0028 sec
+  TOTAL time per image       : 0.0117 sec
+
+ Image 50/100 - Label: 20, Prompt: "a photo of a chair"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0016 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0112 sec
+
+ Image 51/100 - Label: 66, Prompt: "a photo of a raccoon"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0025 sec
+  TOTAL time per image       : 0.0115 sec
+
+ Image 52/100 - Label: 68, Prompt: "a photo of a road"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0021 sec
+  TOTAL time per image       : 0.0111 sec
+
+ Image 53/100 - Label: 41, Prompt: "a photo of a lawn mower"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0017 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0021 sec
+  TOTAL time per image       : 0.0113 sec
+
+ Image 54/100 - Label: 44, Prompt: "a photo of a lizard"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0024 sec
+  TOTAL time per image       : 0.0114 sec
+
+ Image 55/100 - Label: 80, Prompt: "a photo of a squirrel"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0111 sec
+
+ Image 56/100 - Label: 11, Prompt: "a photo of a boy"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0016 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0023 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 57/100 - Label: 99, Prompt: "a photo of a worm"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0027 sec
+  TOTAL time per image       : 0.0118 sec
+
+ Image 58/100 - Label: 81, Prompt: "a photo of a streetcar"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0017 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0113 sec
+
+ Image 59/100 - Label: 92, Prompt: "a photo of a tulip"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0027 sec
+  TOTAL time per image       : 0.0117 sec
+
+ Image 60/100 - Label: 42, Prompt: "a photo of a leopard"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0021 sec
+  TOTAL time per image       : 0.0111 sec
+
+ Image 61/100 - Label: 10, Prompt: "a photo of a bowl"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0111 sec
+
+ Image 62/100 - Label: 37, Prompt: "a photo of a house"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0027 sec
+  TOTAL time per image       : 0.0118 sec
+
+ Image 63/100 - Label: 84, Prompt: "a photo of a table"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0016 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0112 sec
+
+ Image 64/100 - Label: 43, Prompt: "a photo of a lion"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0025 sec
+  TOTAL time per image       : 0.0115 sec
+
+ Image 65/100 - Label: 97, Prompt: "a photo of a wolf"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0111 sec
+
+ Image 66/100 - Label: 27, Prompt: "a photo of a crocodile"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0017 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0025 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 67/100 - Label: 42, Prompt: "a photo of a leopard"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0020 sec
+  prediction               : 0.0024 sec
+  TOTAL time per image       : 0.0114 sec
+
+ Image 68/100 - Label: 5, Prompt: "a photo of a bed"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0111 sec
+
+ Image 69/100 - Label: 16, Prompt: "a photo of a can"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0018 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0024 sec
+  TOTAL time per image       : 0.0117 sec
+
+ Image 70/100 - Label: 31, Prompt: "a photo of a elephant"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0026 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 71/100 - Label: 26, Prompt: "a photo of a cra"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0018 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0114 sec
+
+ Image 72/100 - Label: 53, Prompt: "a photo of a orange"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0026 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 73/100 - Label: 32, Prompt: "a photo of a flatfish"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0021 sec
+  TOTAL time per image       : 0.0111 sec
+
+ Image 74/100 - Label: 43, Prompt: "a photo of a lion"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0111 sec
+
+ Image 75/100 - Label: 36, Prompt: "a photo of a hamster"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0027 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 76/100 - Label: 68, Prompt: "a photo of a road"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0016 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0112 sec
+
+ Image 77/100 - Label: 78, Prompt: "a photo of a snake"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0024 sec
+  TOTAL time per image       : 0.0114 sec
+
+ Image 78/100 - Label: 51, Prompt: "a photo of a mushroom"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0021 sec
+  TOTAL time per image       : 0.0111 sec
+
+ Image 79/100 - Label: 14, Prompt: "a photo of a butterfly"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0018 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0024 sec
+  TOTAL time per image       : 0.0117 sec
+
+ Image 80/100 - Label: 43, Prompt: "a photo of a lion"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0020 sec
+  prediction               : 0.0024 sec
+  TOTAL time per image       : 0.0115 sec
+
+ Image 81/100 - Label: 22, Prompt: "a photo of a clock"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0017 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0021 sec
+  TOTAL time per image       : 0.0113 sec
+
+ Image 82/100 - Label: 41, Prompt: "a photo of a lawn mower"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0017 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0024 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 83/100 - Label: 91, Prompt: "a photo of a trout"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0026 sec
+  TOTAL time per image       : 0.0117 sec
+
+ Image 84/100 - Label: 29, Prompt: "a photo of a dinosaur"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0019 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 85/100 - Label: 4, Prompt: "a photo of a beaver"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0026 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 86/100 - Label: 36, Prompt: "a photo of a hamster"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0016 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0112 sec
+
+ Image 87/100 - Label: 92, Prompt: "a photo of a tulip"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0026 sec
+  TOTAL time per image       : 0.0115 sec
+
+ Image 88/100 - Label: 96, Prompt: "a photo of a willow tree"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0110 sec
+
+ Image 89/100 - Label: 44, Prompt: "a photo of a lizard"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0019 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0115 sec
+
+ Image 90/100 - Label: 55, Prompt: "a photo of a otter"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0020 sec
+  prediction               : 0.0026 sec
+  TOTAL time per image       : 0.0116 sec
+
+ Image 91/100 - Label: 72, Prompt: "a photo of a seal"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0111 sec
+
+ Image 92/100 - Label: 79, Prompt: "a photo of a spider"
+  tiny_patch_extraction    : 0.0028 sec
+  text_embedding           : 0.0016 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0024 sec
+  TOTAL time per image       : 0.0117 sec
+
+ Image 93/100 - Label: 15, Prompt: "a photo of a camel"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0026 sec
+  TOTAL time per image       : 0.0117 sec
+
+ Image 94/100 - Label: 13, Prompt: "a photo of a bus"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0017 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0113 sec
+
+ Image 95/100 - Label: 19, Prompt: "a photo of a cattle"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0027 sec
+  TOTAL time per image       : 0.0117 sec
+
+ Image 96/100 - Label: 52, Prompt: "a photo of a oak tree"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0014 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0030 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0021 sec
+  TOTAL time per image       : 0.0111 sec
+
+ Image 97/100 - Label: 63, Prompt: "a photo of a porcupine"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0112 sec
+
+ Image 98/100 - Label: 61, Prompt: "a photo of a plate"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0027 sec
+  TOTAL time per image       : 0.0117 sec
+
+ Image 99/100 - Label: 84, Prompt: "a photo of a table"
+  tiny_patch_extraction    : 0.0026 sec
+  text_embedding           : 0.0016 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0022 sec
+  TOTAL time per image       : 0.0112 sec
+
+ Image 100/100 - Label: 51, Prompt: "a photo of a mushroom"
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0015 sec
+  patch_selection          : 0.0001 sec
+  big_patch_extraction     : 0.0028 sec
+  bigclip_injection        : 0.0019 sec
+  prediction               : 0.0025 sec
+  TOTAL time per image       : 0.0115 sec
+
+Average Timing Per Step:
+  tiny_patch_extraction    : 0.0027 sec
+  text_embedding           : 0.0017 sec
+  patch_selection          : 0.0003 sec
+  big_patch_extraction     : 0.0029 sec
+  bigclip_injection        : 0.0018 sec
+  prediction               : 0.0025 sec
+  total                    : 0.0119 sec

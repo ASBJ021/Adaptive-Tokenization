@@ -9,8 +9,8 @@ import requests
 import math
 import os
 import time
-
-
+import cProfile
+import pstats
 
 # ------------------- Configuration -------------------
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
@@ -391,4 +391,17 @@ def main():
 
 
 if __name__ == "__main__":
+    # cProfile.run("main()", sort="cumtime")
     main()
+
+    # profiler = cProfile.Profile()
+    # profiler.enable()
+
+    # main()  # Run your target function
+
+    # profiler.disable()
+    # profiler.dump_stats("profile_output.prof")
+
+    # # Optional: Print human-readable stats
+    # stats = pstats.Stats("profile_output.prof")
+    # stats.strip_dirs().sort_stats("cumtime").print_stats(30)

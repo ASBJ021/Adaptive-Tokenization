@@ -1,0 +1,37 @@
+
+
+
+📥 Image loaded: (640, 480)
+⏱️ Patch extraction time: 0.2377 sec
+⏱️ Text embedding (TinyCLIP) time: 0.0432 sec
+⏱️ Patch selection time: 0.0538 sec
+⏱️ Big CLIP injection time: 0.6614 sec
+⏱️ Final inference time (text + similarity): 1.4275 sec
+
+🧠 Final similarity score (patch-based): 0.1739
+⏱️ Total patch-based pipeline time: 2.4237 sec
+
+🧠 Full CLIP similarity: 0.2400
+⏱️ Full CLIP inference time: 0.0239 sec
+
+📊 Patch-Based Classification:
+a photo of a cat               → 0.2097
+a photo of a dog               → 0.2167
+a photo of a bird              → 0.2074
+a photo of a car               → 0.2338
+a photo of a tree              → 0.2178
+a sleeping cat                 → 0.1739
+
+✅ Predicted label: a photo of a car
+⚡ Speed gain from patch-based inference: -10043.03%
+
+
+
+
+✅ Final predicted label: a sleeping animal
+
+🔍 Patch-based similarity score: 0.2105
+⏱️ TinyCLIP + patch selection time: 0.3009 sec
+⏱️ Big CLIP patch injection time: 0.0063 sec
+⏱️ Full CLIP inference time: 0.0433 sec
+⚡ Speed gain: -608.68%
