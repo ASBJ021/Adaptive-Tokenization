@@ -2,17 +2,24 @@ import time
 import torch
 from datasets import load_dataset
 import clip
+import pandas as pd
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 print(f'{DEVICE = }')
 
-NUM_SAMPLES = 100
+NUM_SAMPLES = 1000
 DATASET_NAME = "cifar100"
 MODEL_ID = 'ViT-B/16'
 
+
 # --- Dataset and Prompts ---
 def load_data():
-    dataset = load_dataset(DATASET_NAME, split="test").shuffle(seed=42).select(range(NUM_SAMPLES))
+    if NUM_SAMPLES == 0:
+        dataset = load_dataset(DATASET_NAME, split="test").shuffle(seed=42)
+    else:
+        dataset = load_dataset(DATASET_NAME, split="test").shuffle(seed=42).select(range(NUM_SAMPLES))
+
+    
     classnames = dataset.features["fine_label"].names
     prompts = [f"a photo of a {name.replace('_', ' ')}" for name in classnames]
     return dataset, prompts
@@ -188,16 +195,34 @@ def modified_clip_dropout(dataset, prompts, model_id=MODEL_ID, keep_pct=0.9):
 # --- Main: Compare both ---
 def main():
     dataset, prompts = load_data()
-    Keep_PCT = 0.8
+    # Keep_PCT = 0.8
+    results = []
     # mod_clip = modified_clip(dataset, prompts, keep_pct=Keep_PCT)
 
     orig_acc, orig_time = original_clip(dataset, prompts)
-    mod_acc, mod_time = modified_clip_dropout(dataset, prompts, keep_pct=Keep_PCT)
+    # mod_acc, mod_time = modified_clip_dropout(dataset, prompts, keep_pct=Keep_PCT)
 
-    print(f'Evaluating on {NUM_SAMPLES}')
+    # print(f'Evaluating on {NUM_SAMPLES}')
 
-    print(f"Original CLIP   - Accuracy: {orig_acc*100:.2f}%, Avg Time: {orig_time:.4f}s")
-    print(f"Modified ({Keep_PCT*100} % selected ) - Accuracy: {mod_acc*100:.2f}%, Avg Time: {mod_time:.4f}s")
+    # print(f"Original CLIP   - Accuracy: {orig_acc*100:.2f}%, Avg Time: {orig_time:.4f}s")
+    # print(f"Modified ({Keep_PCT*100} % selected ) - Accuracy: {mod_acc*100:.2f}%, Avg Time: {mod_time:.4f}s")
+
+    # start at 100%, decrease by 10% down to 0%
+    for pct in [i/10 for i in range(10, -1, -1)]:
+        acc, t = modified_clip_dropout(dataset, prompts, keep_pct=pct)
+        results.append({'keep_pct': pct, 'accuracy': acc, 'avg_time': t})
+
+    df = pd.DataFrame(results)
+    if NUM_SAMPLES != 0:
+        print(f"Evaluating on {NUM_SAMPLES} samples of {DATASET_NAME} dataset")
+    else: 
+        print(f"Evaluating on full {DATASET_NAME} dataset")
+    print(f"Original CLIP (100% patches) - Accuracy: {orig_acc*100:.2f}%, Time: {orig_time:.4f}s")
+    print(df.to_string(index=False, formatters={
+        'keep_pct': '{:.0%}'.format,
+        'accuracy': lambda x: f"{x*100:.2f}%",
+        'avg_time': lambda x: f"{x:.4f}s"
+    }))
 
 if __name__ == "__main__":
     main()
