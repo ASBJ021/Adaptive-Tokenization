@@ -6,7 +6,7 @@ import random
 import numpy as np
 import torch.nn.functional as F
 import clip
-from data_utils import load_data
+from data_utils import load_data_normal
 from visual_utils import patchify, viz_patches
 
 # ─── Load Config ─────────────────────────────────────────────────────
@@ -26,6 +26,35 @@ viz = cfg["visualize"]
 # ─── Load Model ──────────────────────────────────────────────────────
 model, processor = clip.load(model_id, device)
 model = model.float()
+
+
+# ─── IO Helpers ──────────────────────────────────────────────────────
+def save_record_jsonl(record, path):
+    """Append a single JSON record to a JSONL file (atomic per line)."""
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(record) + "\n")
+
+
+def load_completed_indices(path):
+    """Return set of already saved image_ids from JSONL file."""
+
+    last_id = -1
+
+    if os.path.exists(path):
+        with open(path, "r", encoding="utf-8") as f:
+            for line in f:
+                try:
+                    # record = json.loads(line)
+                    # completed.add(record.get("image_id"))
+                    record = json.loads(line)
+                    last_id = record.get("image_id", last_id)
+                except Exception:
+                    continue
+    
+    print(last_id)
+    # assert False
+    return last_id
 
 # ─── Model Input Preparation ─────────────────────────────────────────
 def prepare_inputs(img, prompts):
@@ -127,10 +156,16 @@ def genetic_algorithm(pixel_values, text_features, original_cls, num_patches, ke
     return max(population, key=lambda ind: fitness_function(pixel_values, ind, text_features, original_cls))
 
 # ─── Patch-Based CLIP Evaluation ─────────────────────────────────────
-def patch_modified_clip(dataset, prompts, model, processor, device, keep_pct):
+def patch_modified_clip(dataset, prompts, model, processor, device, keep_pct, out_path_jsonl):
     results = []
+    last_done = load_completed_indices(out_path_jsonl)
+    if last_done >= 0:
+        print(f"Resuming from image {last_done+1} (last saved was {last_done})")
+
 
     for idx, item in enumerate(dataset):
+        if idx <= last_done:
+            continue # skip already done
         print(f'{idx = }')
         img, label = item["img"], item["fine_label"]
         pixel_values, text_features, original_cls, patch_tokens = prepare_inputs(img, prompts)
@@ -143,7 +178,7 @@ def patch_modified_clip(dataset, prompts, model, processor, device, keep_pct):
         keep = max(1, int(keep_pct * num_patches))
         iteration = 0
 
-        while iteration < 10:
+        while iteration < 5:
             selected_indices = genetic_algorithm(pixel_values, text_features, original_cls, num_patches, keep)
 
             cls = model.visual.class_embedding.unsqueeze(0).expand(1, -1, -1)
@@ -169,10 +204,16 @@ def patch_modified_clip(dataset, prompts, model, processor, device, keep_pct):
                 if viz:
                     patches = patchify(img, resolution=224, patch_size=16)
                     viz_patches(patches, topk=selected_indices, img_title=f"best_patches_{idx}_{pred = }_{label = }")
+
+                record = {"image_id": idx, "pred": int(pred), "gt": int(label), "selected_indices": selected_indices}
+                save_record_jsonl(record, out_path_jsonl)
+                print(f"Saved record for image {idx} to {out_path_jsonl}")
+                results.append(record)
+
                 break
 
         results.append({
-            'image_id': item.get('id'),
+            'image_id': idx,
             'selected_indices': selected_indices
         })
 
@@ -181,14 +222,21 @@ def patch_modified_clip(dataset, prompts, model, processor, device, keep_pct):
 # ─── Main Function ───────────────────────────────────────────────────
 def main():
     print(f"Evaluating on {'full' if num_samples == 0 else num_samples} samples of {dataset_name} dataset")
-    dataset, prompts = load_data(dataset_name, num_samples)
-    results = patch_modified_clip(dataset, prompts, model, processor, device, keep_pct)
+    dataset, prompts = load_data_normal(dataset_name, num_samples)
+    # results = patch_modified_clip(dataset, prompts, model, processor, device, keep_pct, out_path_jsonl)
 
-    filename = f"{dataset_name}_{num_samples}_final_patches_{int(keep_pct * 100)}.json"
-    with open(filename, 'w') as f:
-        json.dump(results, f, indent=4)
+    # filename = f"{dataset_name}_{num_samples}_final_patches_{int(keep_pct * 100)}.json"
+    # with open(filename, 'w') as f:
+    #     json.dump(results, f, indent=4)
 
-    print(f"Results saved to {filename}")
+    # print(f"Results saved to {filename}")
+
+    out_path_jsonl = f"{dataset_name}_{num_samples}_final_patches_{int(keep_pct * 100)}.jsonl"
+    out_path_jsonl = '/home/utn/firi22ka/Desktop/jenga/Adaptive-Tokenization/new_src/cifar100_10_final_patches_50.jsonl'
+    _ = patch_modified_clip(dataset, prompts, model, processor, device, keep_pct, out_path_jsonl)
+
+    print(f"Per-image results saved line-by-line to {out_path_jsonl} (resume supported).")
+
 
 # ─── Entry Point ─────────────────────────────────────────────────────
 if __name__ == "__main__":
