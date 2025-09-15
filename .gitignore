@@ -1,2 +1,13 @@
 at
 reserch papers
+new_src/__pycache*
+Patch_ranking/Patch_ranking
+Patch_Selection
+src/__pycache__
+*.png
+cifar*
+Patch_ranking/__pycache__
+Patch_ranking/new_src
+.vscode
+*.prof
+models.txt
