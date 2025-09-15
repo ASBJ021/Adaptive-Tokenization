@@ -2,7 +2,7 @@ import time, math, torch
 from torch.nn.functional import normalize
 import clip
 from visual_utils import patchify, viz_patches, plot_heatmap_overlay, visualize_on_original
-from data_utils import load_data
+from data_utils import load_data, load_data_normal
 import os
 import yaml
 from beautifultable import BeautifulTable
@@ -16,10 +16,12 @@ device = cfg.get("device", "cuda")
 if not torch.cuda.is_available():
     device = "cpu"
 
+# device = "cpu"
+
 num_samples  = cfg["num_samples"]
 dataset_name = cfg["dataset_name"]
 model_id     = cfg["model_id"]
-# keep_pct = cfg["keep_pct"]
+split = cfg["split"]
 viz = cfg['visualize']
 
 # load model
@@ -47,7 +49,7 @@ def modified_clip_tflayers(dataset, prompts, model, proc, DEVICE, keep_pct=0.9):
 
     total, correct, prun_ratio = 0.0, 0, 0.0
     for item in dataset:
-        img, label = item["img"], item["fine_label"]
+        img, label = item["image"], item["label"]
         img_input  = proc(img).unsqueeze(0).to(DEVICE)
 
         with torch.no_grad():
@@ -150,19 +152,21 @@ def main():
 
      # 1) sampling info
     if num_samples != 0:
-        print(f"Evaluating on {num_samples} samples of {dataset_name} dataset")
+        print(f"Evaluating on {num_samples} samples of {dataset_name} dataset ({device = })")
     else:
-        print(f"Evaluating on full {dataset_name} dataset")
+        print(f"Evaluating on full {dataset_name} dataset ({device = })")
 
 
-    ds, prompts = load_data(dataset_name, num_samples)
+    ds, prompts = load_data_normal(dataset_name, num_samples, split)
     # idx = 10
 
-    keep_pct = [1.0, 0.95, 0.9, 0.85, 0.8, 0.75, 0.7, 0.65, 0.6, 0.55, 0.5]
+    keep_pct = [1.0, 0.95, 0.9, 0.85, 0.80]
     records = []
 
     for pct in keep_pct:
+        print(f'{pct = }')
         acc, avg_time, avg_prun_ratio = modified_clip_tflayers(ds, prompts, model, processor, device, keep_pct=pct)
+        
         records.append({
                 'keep_pct':      pct,
                 'accuracy':      acc,
