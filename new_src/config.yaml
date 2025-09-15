@@ -1,9 +1,10 @@
-device: "cuda"             # or "cpu"
-num_samples: 1000
-dataset_name: "cifar100"
+device: "cpu"             # or "cpu"
+num_samples: 100
+dataset_name: "clane9/imagenet-100" #"cifar100" #
+split: "validation" # train test val validation
 model_id: "ViT-B/16"
 visualize: False
 # only to collect data
-keep_pct: 0.8 # 0 to 1 
+keep_pct: 0.5 # 0 to 1 
 
 
