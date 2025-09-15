@@ -1,0 +1,20 @@
+dataset_name: cifar100
+annotations: cifar100_10_final_patches_50.jsonl
+
+# Training
+batch_size: 64
+epochs: 50
+lr: 0.0001
+img_size: 32
+num_workers: 2
+device: cuda
+save_dir: Patch_Selection/checkpoints_01
+seed: 42
+
+# Note: split is fixed at 70/15/15 in code
+# val_split is unused but kept for CLI compatibility
+val_split: 0.15
+
+# Prediction export
+predictions_jsonl: Patch_Selection/checkpoints01/predictions.jsonl
+pred_thresh: 0.5
