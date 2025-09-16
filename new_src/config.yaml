@@ -1,10 +1,14 @@
-device: "cpu"             # or "cpu"
+device: "cuda"             # or "cpu"
 num_samples: 100
 dataset_name: "clane9/imagenet-100" #"cifar100" #
 split: "validation" # train test val validation
 model_id: "ViT-B/16"
 visualize: False
 # only to collect data
-keep_pct: 0.5 # 0 to 1 
+keep_pct: 1 # 0 to 1 
 
-
+# GA can optionally optimize the keep percentage (number of patches kept).
+optimize_keep: true
+min_keep_pct: 0.1  # lower bound on keep ratio when optimizing
+max_keep_pct: 0.95  # upper bound on keep ratio when optimizing
+keep_penalty: 0.2  # penalty strength for keeping more patches (trade-off)

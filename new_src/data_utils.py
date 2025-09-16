@@ -1,8 +1,9 @@
 
 from datasets import load_dataset
-
 import pickle
 import numpy as np
+import matplotlib.pyplot as plt
+
 
 def load_data(DATASET_NAME, NUM_SAMPLES):
     ds = load_dataset(DATASET_NAME, split="test")
@@ -19,14 +20,13 @@ def load_data_folder(file_path, num_samples = 0):
   
 def load_data_normal(DATASET_NAME, NUM_SAMPLES, SPLIT="test"):
     ds = load_dataset(DATASET_NAME,split = SPLIT)
-    ds = ds.shuffle(seed=42).select(range(NUM_SAMPLES))
-    # ds = ds.select(range(NUM_SAMPLES))
+    # ds = ds.shuffle(seed=42).select(range(NUM_SAMPLES))
+    ds = ds.select(range(NUM_SAMPLES))
     print(ds[0])
     names = ds.features["label"].names
     prompts = [f"a photo of a {n.replace('_',' ')}" for n in names]
     return ds, prompts
 
-import matplotlib.pyplot as plt
 
 def plot_dataset(ds, prompts):
     """
