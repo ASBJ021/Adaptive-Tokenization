@@ -38,7 +38,9 @@ def viz_patches(x, figsize=(8,8), topk=None, t=5, img_title=''):
 def plot_heatmap_overlay(orig_img, patch_sims, grid_size, alpha=0.5, cmap="jet"):
     # build and normalize low-res heatmap
     heatmap = np.array(patch_sims).reshape(grid_size)
-    norm = (heatmap - heatmap.min()) / (heatmap.ptp() + 1e-8)
+    # NumPy 2.0 removed ndarray.ptp(); use np.ptp(heatmap) instead
+    rng = np.ptp(heatmap)
+    norm = (heatmap - heatmap.min()) / (rng + 1e-8)
     # upsample and colorize
     W,H = orig_img.size
     hm = Image.fromarray((norm*255).astype(np.uint8), mode="L") \
